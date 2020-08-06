@@ -12,7 +12,7 @@ add_action( 'wp_enqueue_scripts', 'wppreload_wp_enqueue_scripts' );
 add_filter( 'script_loader_tag', 'wppreload_script_loader_tag', 10, 2 );
 
 function wppreload_wp_enqueue_scripts() {
-  wp_enqueue_script( 'wppreload', plugin_dir_url( __FILE__ ) . 'preload.js', array(), '1.0', true );
+  wp_enqueue_script( 'wppreload', plugin_dir_url( __FILE__ ) . 'preload.min.js', array(), '1.0', true );
 }
 
 function wppreload_script_loader_tag( $tag, $handle ) {
